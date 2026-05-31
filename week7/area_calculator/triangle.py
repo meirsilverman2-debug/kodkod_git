@@ -24,7 +24,10 @@ class Triangle(Rectangle):
         
         return("All attr most be an int or flout not str and bigger than zero")
         
-    
+    def to_dict(self):
+        return {"area": self.get_area(),"perimter": self.get_perimter()}
+
+
     def __str__(self):
         if self.valid.is_valid(self.side_a, self.side_b, self.side_c):
             return f"The formula for getting a triangle area is: {self.width} * {self.heigth} = {self.width * self.heigth} \n ,and the formula for getting the perimeter is: {self.side_a} + {self.side_b} + {self.side_c} = {self.side_a + self.side_b + self.side_c}"

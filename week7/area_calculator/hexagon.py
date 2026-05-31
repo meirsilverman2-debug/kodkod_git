@@ -13,6 +13,10 @@ class Hexagon(Shape):
     def get_perimeter(self):
         return 6 * self.side
     
+    def to_dict(self):
+        return {"area": self.get_area(),"perimeter": self.get_perimeter()}
+
+
     def __str__(self):
         return f" The formula foe getting hexagon area is: (3 * 3 ** 0.5 * {self.side} ** 2) / 2 \n , and the formula for getting the perimeter is: 6 * {self.side}"
 
@@ -22,3 +26,4 @@ class Hexagon(Shape):
 # print(h.get_area())
 # print(h.get_perimter())
 # print(h)
+# print(h.to_dict())

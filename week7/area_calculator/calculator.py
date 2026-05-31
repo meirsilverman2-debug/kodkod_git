@@ -12,7 +12,11 @@ class Shape:
         pass
 
     def to_dict(self):
-        pass
+        return {"area": self.get_area(),"perimeter": self.get_perimeter()}
 
     def __str__(self):
         pass
+
+
+
+
