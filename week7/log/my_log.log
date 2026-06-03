@@ -1,0 +1,21 @@
+2026-05-25 10:05:49,421 | INFO | __main__ | Application started | 17
+2026-05-25 10:05:49,421 | ERROR | __main__ | battery is off | 18
+2026-05-25 10:08:39,490 | INFO | __main__ | Application started | 19
+2026-05-25 10:08:39,490 | ERROR | __main__ | battery is off | 20
+2026-05-25 10:11:35,733 | INFO | __main__ | Application started | 19
+2026-05-25 10:11:35,734 | ERROR | __main__ | battery is off | 20
+2026-05-25 10:13:23,260 | INFO | __main__ | Application started | 19
+2026-05-25 10:13:23,261 | ERROR | __main__ | battery is off | 20
+2026-05-25 10:13:23,261 | WARNING | __main__ | low disk space | 21
+2026-05-25 10:13:59,460 | INFO | __main__ | Application started | 19
+2026-05-25 10:13:59,460 | ERROR | __main__ | battery is off | 20
+2026-05-25 10:13:59,465 | WARNING | __main__ | Low disk space | 21
+2026-05-25 10:22:31,217 | INFO | __main__ | Application started | 19
+2026-05-25 10:22:31,217 | ERROR | __main__ | battery is off | 20
+2026-05-25 10:22:31,218 | WARNING | __main__ | Low disk space | 21
+2026-05-25 10:22:31,218 | ERROR | __main__ | This is the error: division by zero | 27
+Traceback (most recent call last):
+  File "C:\Users\User\Desktop\website\kodkode_git\week7\log\lesson_2_monday.py", line 25, in <module>
+    2/0
+    ~^~
+ZeroDivisionError: division by zero

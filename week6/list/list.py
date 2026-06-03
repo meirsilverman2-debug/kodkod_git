@@ -170,6 +170,7 @@ def marge_two_sorted_list(lst1: list[int], lst2: list[int]) -> list[int]:
 # exercise_8:
 
 def rotate_a_list(lst: list[int], k: int) -> list[int]:
+    k = k % len(lst) # more professional I learnd it from my dearest classmates
     for i in range(k):
          num = lst.pop()
          lst.insert(0, num)

@@ -67,7 +67,7 @@ class BankAccount:
         self.balance += amount
     
     def withdraw(self, amount):
-        while self.balance > 0:
+        if self.balance >= amount:
             self.balance -= amount
 
         print(f"You reached: {self.balance} so you cannot withdraw!!!")

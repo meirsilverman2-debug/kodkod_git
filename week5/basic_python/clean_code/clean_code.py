@@ -120,4 +120,98 @@ def  handle_purcase(user_email, product_name, product_price, stock, quantity):
     print(f"Order {order_status}: {order_user} bought {order_quantity}x {order_product} for ${order_total}")
     return order_user, order_product, order_quantity, order_total, order_status
 
-handle_purcase("'vfdbdfb", "soda", 5, 3, 7  )
+# handle_purcase("'vfdbdfb", "soda", 5, 3, 7  ) # trying to ru the code
+
+# question_3: Single Responsibility
+# from this:
+"""
+def manage_students(names, grades, new_name, new_grade):
+    # validation
+    if not new_name or len(new_name) < 2:
+        print("Error: invalid name")
+        return students
+    if new_grade < 0 or new_grade > 100:
+        print("Error: grade must be 0-100")
+        return students
+
+    # add student
+    grades.append(new_grade)
+
+    # calculate stats
+    total = sum(grades)
+    average = total / len(grades)
+    top_count = sum(1 for g in grades if g >= 90)
+    failing_count = sum(1 for g in grades if g < 56)
+
+    # print report
+    print("=== Student Report ===")
+    for i in range(len(names)):
+        print(f"  {names[i]}: {grades[i]}")
+    print(f"Average: {average:.1f}")
+    print(f"Top students: {top_count}")
+    print(f"Failing: {failing_count}")
+
+    # save to file
+    with open("students.txt", "w") as f:
+        for i in range(len(names)):
+            f.write(f"{names[i]},{grades[i]}\n")
+
+    return names, grades
+"""
+# to this
+
+def validation(new_name, new_grade):
+    if not new_name or len(new_name) < 2:
+        print("Error: invalid name")
+        return False
+    if new_grade < 0 or new_grade > 100:
+        print("Error: grade must be 0-100")
+        return True
+
+def add_student(grades, new_grade, names, new_name):
+    # add student
+    grades.append(new_grade)
+    names.append(new_name)
+
+
+def calculate_stats(grades):
+    total = sum(grades)
+    average = total / len(grades)
+    top_count = sum(1 for g in grades if g >= 90)
+    failing_count = sum(1 for g in grades if g < 56)
+
+    
+
+
+
+
+def print_report(names, grades):
+    print("=== Student Report ===")
+    for i in range(len(names)):
+        print(f"  {names[i]}: {grades[i]}")
+    print(f"Average: {average:.1f}")
+    print(f"Top students: {top_count}")
+    print(f"Failing: {failing_count}")
+
+
+def save_to_file(names, grades):
+    with open("students.txt", "w") as f:
+        for i in range(len(names)):
+            f.write(f"{names[i]},{grades[i]}\n")
+
+    # return names, grades
+
+
+def manage_students(names, grades, new_name, new_grade):
+
+    validation(names, new_name, new_grade)
+    add_student(grades, new_grade)
+    # calculate_stats(grades)
+    # print_report(names, grades,)
+    # save_to_file(names, grades)
+
+    print(names, grades)
+
+
+
+manage_students(["Meir", "David"], [80, 40], "Manman", 100)

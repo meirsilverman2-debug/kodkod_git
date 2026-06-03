@@ -1,0 +1,7 @@
+{
+    "timestamp": "2026-05-25T12:30:26.902013",
+    "level": "INFO",
+    "module": "auth",
+    "message": "User logged in",
+    "user_id": 42
+}
